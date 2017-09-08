@@ -1,0 +1,7 @@
+table, th, td {
+    Border: 1px solid black;
+}
+th,td {
+    padding: 5px;
+    font-family: sans-serif;
+}
