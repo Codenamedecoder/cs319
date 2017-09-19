@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Unit 3 Exercise</title>
+    </head>
+    <Body>
+        <h1>Calculator</h1>
+        <script>
+            function addNumbers() {
+                var x;
+                var y;
+                var answer;
+                
+                x=222;
+                //alert(x);
+                y=444;
+                //alert(y);
+                
+                answer = x+y;
+                //alert(answer);
+                
+                document.getElementById("equation").innerHTML = x + " plus " + y + " equals " + answer + "!";
+            }
+               function subNumbers() {
+                var x;
+                var y;
+                var answer;
+                
+                x="777";
+                //alert(x);
+                y="111";
+                //alert(y);
+                
+                answer = x - y;
+                //alert(answer);
+                
+                 document.getElementById("equation").innerHTML = x + " minus " + y + " equals " + answer + "!";
+               }
+               function multiNumbers() {
+                var x;
+                var y;
+                var answer;
+                
+                x="6";
+                //alert(x);
+                y="111";
+                //alert(y);
+                
+                answer = x * y;
+                //alert(answer);
+                
+                 document.getElementById("equation").innerHTML = x + " multiplied by " + y + " equals " + answer + "!";
+               }
+               function diviNumbers() {
+                var x;
+                var y;
+                var answer;
+                
+                x="3996";
+                //alert(x);
+                y="6";
+                //alert(y);
+                
+                answer = x / y;
+                //alert(answer);
+                
+                 document.getElementById("equation").innerHTML = x + " divided by " + y + " equals " + answer + "!";
+               }
+        </script>
+            <p id="equation"></p>
+        <form name="calculator" action="#" method="get">
+            <p>
+                <input type="button" id="add" name="add" value="Add" onclick="addNumbers();">
+                 <input type="button" id="sub" name="sub" value="Subtract" onclick="subNumbers();">
+                 <input type="button" id="multi" name="multi" value="Multiply" onclick="multiNumbers();">
+                 <input type="button" id="divi" name="divi" value="Divide" onclick="diviNumbers();">
+            </p>
+        </form>
+    </Body>
+</html>
