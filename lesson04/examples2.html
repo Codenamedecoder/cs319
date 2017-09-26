@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Unit 4 Example</title>
+    </head>
+    <Body>
+        <script>
+            function check() {
+                //alert(document.example.exampleText.value);
+                var first=
+                    document.example.exampleText.value;
+                var second =
+                    document.example.moreText.value;
+               // first = first.trim();
+                //second = second.trim();
+                //first = parsInt(first);
+                //first = parsFloat(first);
+                //second = parsInt(second);
+                document.getElementById("words").innerHTML=
+                    first;
+                document.getElementById("exampleText").style.backgroundColor = "green";
+            }
+        </script>
+        <form name="example" id="example" action="#" method="get"> 
+            <P>First Input: <input type="text" name="exampleText" id="exampleText">
+            </P>
+            <p>Second Input: <input type="text" name="moreText" id="moreText">
+            </p>
+            <P><input type="button" name="go" id="go" value="Go!" onclick="check();">
+            </P>
+        </form>
+        <hr>
+        <p id="words"></p>
+    </Body>
+</html>

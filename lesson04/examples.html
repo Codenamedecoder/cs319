@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Unit 4 Example</title>
+    </head>
+    <Body>
+        <script>
+            //function testfunction() {
+                var myColor;
+                var myText;
+                myColor=document.getElementById("color1").value;
+                myText=document.example.exampleText.value;    //".value"gets only the VALUE in that form not the whole form
+                alert(myColor);
+                alert(myText);
+            }
+        </script>
+        <form name="example" id="example" action="#" method="get"> 
+            <P><input type="color" name="color1" id="color1">
+            </P>
+            <P><input type="text" name="exampleText" id="exampleText">
+            </P>
+            <P><input type="button" name="go" id="go" value="Go!" onclick="testfunction();">
+            </P>
+        </form>
+    </Body>
+</html>
