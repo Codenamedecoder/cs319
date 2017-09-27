@@ -4,8 +4,43 @@
         <meta charset="utf-8">
     </head>
     <Body>
-        <form>
-            <p> <input type="text" name= </p>
+        <script>
+            function tellstory() {
+                
+                var first;
+                var second;
+                var third;
+                var fourth;
+            
+                first = document.story.name.value;
+                second = document.story.color.value;
+                third = document.story.bodypart.value;
+                fourth = document.story.date.value;
+                
+                document.getElementById("storyhere").innerHTML= "My name is " + first + "and on " + fourth + " eating ice cream turned my " + third + " " + second + ".";
+            }
+        </script>
+        <form name=story>
+            <p>Name: <input type="text" name="name" action="#" method="get" id="nameText"></p>
+            <P>Color: <br> 
+                <input type="radio" name="color" action="#" method="get" id="green" value="green"> Green<br>
+            <input type="radio" name="color" action="#" method="get" id="purple" value="purple"> Purple <br>
+            <input type="radio" name="color" action="#" method="get" id="seethrough" value="seethrough"> See Through <br>
+            </P>
+            <p>Body Part: </p>
+            <select name="bodypart" id="bpart">
+                <option value="finger/fingers">Finger/Fingers</option>
+                <option value="nose">Nose</option>
+                <option value="ears">Ears</option>
+            </select>
+        
+            <br>
+            <p>Date you last ate Ice cream</p>
+            <input type="date" name="date" id="time">
+            <br>
+            <input type="button" name="go" id="go" value="Tell Story!" onclick="tellstory();">
+            <hr>
+             <p id="storyhere"></p>
         </form>
     </Body>
 </html>
