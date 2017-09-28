@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Name Cleanup</title>
+    </head>
+    <Body>
+        <h1>Name Cleanup</h1>
+        <script>
+            function cleanupnames() {
+                var one
+                var two
+                var three
+                var four
+                
+                one = document.allnames.firstname.value;
+                two = document.allnames.middleinitial.value;
+                three = document.allnames.lastname.value;
+                four = document.allnames.fullname.value
+                
+                one = one.trim(one);
+                two = two.trim(two);
+                three = three.trim(three);
+                one = one.toUpperCase(one);
+                two = two.toUpperCase(two);
+                three = three.toUpperCase(three);
+                 
+                four = one + " " + two + " " + three;
+                
+                document.allnames.fullname.value = four;
+            }
+            
+            
+        </script>
+        <form name="allnames" id="anames" action="#" method="get">
+            <p>First Name: <br>
+            <input type="text" name="firstname" id="fname"></p>
+            <p>Middle Initial: <br>
+            <input type="text" name="middleinitial" id="minitial"></p>
+            <p>Last Name: <br>
+            <input type="text" name="lastname" id="lname"></p>
+            <p><Input type="button" name="cleanname" id="cname" value="Cleanup Name" onclick="cleanupnames();"></p>
+            <p>Full Name: <br>
+            <input type="text" name="fullname" id="funame" readonly><br></p>
+        </form>
+    </Body>
+</html>
