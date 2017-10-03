@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Months</title>
+    </head> <h1>Months</h1>
+    <Body>
+        <script>
+            function tellmonth(){
+                var number = document.numberform.numbers.value;
+                
+                number = number.trim();
+                
+                if (number == "1") {
+                    alert("January");
+                    return true;
+                } else if (number == "2") {
+                    alert("Febuary");
+                    return true;
+                } else if (number == "3") {
+                    alert("March");
+                    return true;
+                }  else if (number == "4") {
+                    alert("April");
+                    return true;
+                }  else if (number == "5") {
+                    alert("May");
+                    return true;
+                }  else if (number == "6") {
+                    alert("June");
+                    return true;
+                }  else if (number == "7") {
+                    alert("July");
+                    return true;
+                }  else if (number == "8") {
+                    alert("August");
+                    return true;
+                }  else if (number == "9") {
+                    alert("September");
+                    return true;
+                }  else if (number == "10") {
+                    alert("October");
+                    return true;
+                }  else if (number == "11") {
+                    alert("November");
+                    return true;
+                }  else if (number == "12") {
+                    alert("December");
+                    return true;
+                }  else if (number >= "13") {
+                    alert("Please Choose a number that is less then 13.");
+                    return true;
+                }  else if (number == "") {
+                    alert("Please Choose a Number");
+                    document.numberform.numbers.focus();
+                    return true;
+                }
+                
+            }
+        </script>
+        <form name="numberform" id="numberform" action="#" method="get">
+            <input type="number" name="numbers" id="number">
+            <input type="submit" name="submit" id="submit" onclick="tellmonth();">
+        </form>
+    </Body>
+</html>

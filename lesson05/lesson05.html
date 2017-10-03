@@ -17,10 +17,22 @@
                 third = document.story.bodypart.value;
                 fourth = document.story.date.value;
                 
-                document.getElementById("storyhere").innerHTML= "My name is " + first + "and on " + fourth + " eating ice cream turned my " + third + " " + second + ".";
+                first = first.trim();
+                second = second.trim();
+                if (first == "") {
+                    alert("Please enter your name")
+                    document.story.name.focus();
+                    return false;
+                } else if (second == "") {
+                    return false;
+                } else {
+                    return true;
+                }
+                
+                document.getElementById("storyhere").innerHTML= "My name is " + first + " and on " + fourth + " eating ice cream turned my " + third + " " + second + ".";
             }
         </script>
-        <form name="story" id="story" action="#" method="get">
+        <form name="story" id="story" action="#" method="get" onsubmit="return tellstory();">
             <p>Name: <input type="text" name="name" action="#" method="get" id="nameText"></p>
             <P>Color: <br> 
                 <input type="radio" name="color" action="#" method="get" id="green" value="green"> Green<br>
@@ -38,9 +50,9 @@
             <p>Date you last ate Ice cream</p>
             <input type="date" name="date" id="time">
             <br>
-            <input type="button" name="go" id="go" value="Tell Story!" onclick="tellstory();">
+            <input type="submit" name="go" id="go" value="Tell Story!">
             <hr>
-             <p id="storyhere"></p>
+             <p> <input type="text" id="storyhere"> </p>
         </form>
     </Body>
 </html>
