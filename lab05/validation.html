@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Name Cleanup</title>
+    </head>
+    <Body>
+        <h1>Validation</h1>
+        <script>
+            function validate() {
+                //alert();
+                var first = document.validateform.firstname.value;
+                var last = document.validateform.lastname.value;
+                var mail = document.validateform.email.value;
+                
+                if (first == "") {
+                    document.validateform.firstname.focus;
+                    return false;
+                } else if (last == "") {
+                    document.validateform.lastname.focus;
+                    return false
+                } else if (mail == "") {
+                    document.validateform.email.focus;
+                    return false
+                } else {
+                    return true
+                }
+            }    
+        </script>
+        <form name="validateform" id="validateform" action="http://yoda.cs.uwec.edu/cs319/students/siasmj/echo.php" method="get" onsubmit="return validate();">
+            <p>First Name: <br>
+            <input type="text" name="firstname" id="fname"></p>
+            <p>Last Name: <br>
+            <input type="text" name="lastname" id="minitial"></p>
+            <p>Email Address: <br>
+            <input type="text" name="email" id="email"></p>
+            <p><Input type="submit" name="go" id="go" value="Submit"></p>
+        </form>
+    </Body>
+</html>

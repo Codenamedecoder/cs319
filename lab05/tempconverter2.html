@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Temp Converter</title>
+    </head>
+    <h1>Temperature Converter</h1>
+        <script>
+            function tempconvert(){
+                //alert();
+                if (document.getElementById("ftoc").checked == true){
+                var fahrenheit;
+                var celsius;
+                
+                fahrenheit = parseFloat(document.converter.f.value);
+                celsius = parseFloat(document.converter.c.value);
+                
+                celsius = ((fahrenheit - 32) * (5/9));
+                
+                document.converter.c.value = celsius;
+                
+                document.getElementById("c").style.backgroundColor = "lightgreen";
+                } else if (document.getElementById("ctof").checked == true) {
+                var fahrenheit;
+                var celsius;
+                
+                fahrenheit = parseFloat(document.converter.f.value);
+                celsius = parseFloat(document.converter.c.value);
+                
+                fahrendheit = (celsius * (9/5) + 32);
+                
+                document.converter.f.value = fahrendheit;
+                
+                document.getElementById("f").style.backgroundColor = "lightgreen";
+                }
+            }
+    </script>
+    <Body>
+        <form name="converter" id="convert" action="#" method="get">
+            <P>Temperature in Fahrenheit: <br>
+            <input type="number" name="f" id="f">
+            </P>
+            <P>
+            <p><input type="radio" name="convert" id="ftoc" value="F to C" onclick="converttempftoc();"> F to C</p>
+            <p><input type="radio" name="convert" id="ctof" value="C to F" onclick="converttempctof();"> C to F</p>
+            </P>
+            <P>Temperature in celsius: <br>
+            <input type="number" name="c" id="c">
+            </P>
+            <input type="button" name="converttemp" id="converttemp" value="Convert" onclick="tempconvert();">
+        </form>
+    </Body>
+</html>
