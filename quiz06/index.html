@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>page Title</title>
+    </head>
+    <Body>
+        <script>
+            function filter() {
+                
+                if (isNaN(favcolor.value) == false) {
+                    alert("Please type your favorite number");
+                    favcolor.select();
+                    return false;
+                    
+                } else {
+                    return true;
+                }
+            }
+        </script>
+        <form name="colorform" id="colorform" action="#" method="get">
+            Favorite Color:<input type="text" name="favcolor" id="favcolor">
+            <input type="submit" name="submit" id="submit" value="Submit">
+        </form>
+    </Body>
+</html>
