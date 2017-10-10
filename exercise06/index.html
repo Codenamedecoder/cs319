@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>page Title</title>
+    </head> <h1>Guess the Number</h1>
+    <Body>
+        <script>
+            function makeguess(){
+                var guess = document.getElementById("numguess");
+                
+                
+                if (guess.value.trim() == "") {
+                    alert("Please make a guess");
+                    guess.select();
+                    return false;
+                } else if (isNaN (guess.value.trim()) == true) {
+                    alert("Please guess a number");
+                   guess.select();
+                    return false;
+                } else if (guess.value.trim() <= 0) {
+                    alert("Please enter a number between 1 and 10");
+                    guess.select();
+                    return false;
+                } else if (guess.value.trim() >= 11) {
+                    alert("Please guess a number between 1 and 10");
+                    guess.select();
+                    return false;
+                } else if (guess.value.trim() > 6) {
+                    alert("You guessed too high");
+                    guess.select();
+                    return false;
+                } else if (guess.value.trim() < 6) {
+                    alert("You guessed too low");
+                    guess.select();
+                    return false;
+                } else if (guess.value.trim() == 6) {
+                    alert("YOU GUESSED CORRECTLY!!!");
+                    return true;
+                }
+                
+            }    
+        </script>
+        <form name = "guessform" id = "guessform" action = "#" method = "get">
+            <input type = "text" name = "numguess" id = "numguess">
+            <P><input type = "button" name = "go" id = "go" value = "Make a Guess" onclick ="makeguess();"></P>
+        </form>
+    </Body>
+</html>
