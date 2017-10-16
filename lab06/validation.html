@@ -12,15 +12,27 @@
                 var first = document.validateform.firstname.value;
                 var last = document.validateform.lastname.value;
                 var mail = document.validateform.email.value;
-                
+                var ages = document.getElementById("age");
                 if (first == "") {
-                    document.validateform.firstname.focus;
+                    document.validateform.firstname.focus();
                     return false;
                 } else if (last == "") {
-                    document.validateform.lastname.focus;
+                    document.validateform.lastname.focus();
                     return false
                 } else if (mail == "") {
-                    document.validateform.email.focus;
+                    document.validateform.email.focus();
+                    return false
+                } else if (mail.endsWith("@uwec.edu") == false) {
+                    document.validateform.email.focus();
+                    return false
+                } else if (ages == "") {
+                    document.validateform.age.focus();
+                    return false
+                } else if (isNaN(ages.value) == true)  {
+                    document.validateform.age.focus();
+                    return false
+                } else if (ages.value <= 17) {
+                    document.validateform.age.focus();
                     return false
                 } else {
                     return true
@@ -34,6 +46,8 @@
             <input type="text" name="lastname" id="minitial"></p>
             <p>Email Address: <br>
             <input type="text" name="email" id="email"></p>
+            <p>Age: <br>
+            <input type="text" name="age" id="age"></p>
             <p><Input type="submit" name="go" id="go" value="Submit"></p>
         </form>
     </Body>
