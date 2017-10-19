@@ -6,12 +6,22 @@
     </head>
     <body>
         <script>
-            
+            function validateAge() {
+               var input = document.checkAge.age.value;
+                
+                if (input == "") {
+                    alert("Please enter your age.");
+                    document.getElementById("age").select();
+                    return false;
+                } else {
+                    return true;
+                    }
+            }
         </script>
         <form name="checkAge" id="checkAge" action="#" method="get">
             <p>How old are you?<br>
             <input type="text" name="age" id="age"></p>
-            <p><input type="submit" name="submit=" id="submit" value="Submit"></p>
+            <p><input type="submit" name="submit=" id="submit" value="Submit" onclick="validateAge();"></p>
         </form>
     </body>
 </html>
