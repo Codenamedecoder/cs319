@@ -7,7 +7,7 @@
     <body>
         <?php 
         
-        //$first = $_REQUEST["start"];
+        $first = $_REQUEST["start"];
         $second = $_REQUEST["end"];
         
         //echo "<p>" . $first . "</p>";
